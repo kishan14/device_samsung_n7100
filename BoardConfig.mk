@@ -31,6 +31,13 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/n7100/bluetooth
 TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
 TARGET_KERNEL_CONFIG := custom_n7100_defconfig
 
+TARGET_GCC_VERSION_AND := 4.8
+TARGET_GCC_VERSION_ARM := 4.7-sm
+TARGET_USE_O3 := true
+STRICT_ALIASING := true
+SUPPRES_UNUSED_WARNING := true
+OPT_MEMORY := true
+
 # Selinux
 BOARD_SEPOLICY_DIRS := \
     device/samsung/n7100/selinux

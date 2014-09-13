@@ -14,6 +14,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+LOCAL_CFLAGS += -fno-strict-aliasing
+
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := audio.primary.$(TARGET_BOOTLOADER_BOARD_NAME)
@@ -27,6 +29,7 @@ LOCAL_C_INCLUDES += \
 	external/expat/lib \
 	$(call include-path-for, audio-utils) \
 	$(call include-path-for, audio-effects)
+
 
 LOCAL_SHARED_LIBRARIES := liblog libcutils libtinyalsa libaudioutils libdl libexpat
 
